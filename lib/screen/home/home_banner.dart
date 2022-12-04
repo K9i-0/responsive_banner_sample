@@ -26,11 +26,10 @@ class _Banner extends StatelessWidget {
     // バナーの幅を取得
     final bannerWidth = MediaQuery.of(context).size.width - 32;
 
-    // ListViewの最小幅制約を解除している
+    // ListViewの制約を解除することで、画像をClipする
     return UnconstrainedBox(
       child: ConstrainedBox(
         constraints: BoxConstraints(
-          // 最大幅の制約も消えるので指定
           maxWidth: bannerWidth,
         ),
         child: ClipRRect(
